@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098a17585af354648b16e0cad7e9f8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 679709430}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -289,7 +291,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Lose!!!
+  m_Text: 0
 --- !u!222 &679709431
 CanvasRenderer:
   m_ObjectHideFlags: 0
