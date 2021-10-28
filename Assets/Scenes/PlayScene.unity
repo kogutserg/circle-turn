@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreText: {fileID: 1310016987}
+  bonusEffect: {fileID: 7132642858474979981, guid: 8ec0be216152245ec9ae1ef019fe8051, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
