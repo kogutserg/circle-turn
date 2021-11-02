@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class BallScripts : MonoBehaviour
 {
-    public int score;
+    public int score = 1;
+    public bool isMulti;
     [SerializeField] Text scoreText;
 
     public GameObject bonusEffect;
+
+    public void Start()
+    {
+        isMulti = PlayerPrefs.GetInt("isMulti") == 1 ? true : false;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,7 +23,10 @@ public class BallScripts : MonoBehaviour
         {
             Destroy(other.gameObject);
             Instantiate(bonusEffect, transform.position, Quaternion.identity);
-            score++;
+            if (isMulti)
+                score += 2;
+            else
+                score++;
         }
 
         if(other.gameObject.tag == "Enemy")
